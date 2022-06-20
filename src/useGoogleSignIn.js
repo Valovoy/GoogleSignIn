@@ -17,8 +17,7 @@ export const useGoogleSignIn = () => {
 
       setGsiScriptLoaded(true);
       window.google.accounts.id.initialize({
-        client_id:
-          "856826365967-rs4v4p9lodsv6ic64matqjds82oa66r1.apps.googleusercontent.com",
+        client_id: process.env.REACT_APP_GOOGLE_CLIENT_KEY,
         callback: handleCredentialResponse,
         itp_support: true,
       });
